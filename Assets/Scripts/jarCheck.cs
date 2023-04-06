@@ -5,7 +5,7 @@ using UnityEngine;
 public class jarCheck : MonoBehaviour
 {
     RaycastHit _jarHit;
-    int layerMask = 1 <<10;
+    //int layerMask = 1 <<10;
     public GameObject mainCam;
     public GameObject _jar1;
     public GameObject _jar2;
@@ -59,7 +59,7 @@ public class jarCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out _jarHit, 20 , layerMask))
+        if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out _jarHit, 20))
         {
             if(_jarHit.collider.gameObject == _jar_pill_1&Input.GetMouseButtonDown(0)){
                 _pill1.SetActive(true);
@@ -102,29 +102,34 @@ public class jarCheck : MonoBehaviour
             }
         }
 
-        if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out _jarHit, 20 , layerMask))
+        if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out _jarHit, 20))
         {
             if(_jarHit.collider.gameObject == _jar1&Input.GetMouseButtonDown(0))
             {
                 if(_pill1.activeSelf)
                 {
                     _jar1_1.SetActive(true);
+                    _pill1.SetActive(false);
                 }
                 else if(_pill2.activeSelf)
                 {
                     _jar1_2.SetActive(true);
+                    _pill2.SetActive(false);
                 }
                 else if(_pill3.activeSelf)
                 {
                     _jar1_3.SetActive(true);
+                    _pill3.SetActive(false);
                 }
                 else if(_pill4.activeSelf)
                 {
                     _jar1_4.SetActive(true);
+                    _pill4.SetActive(false);
                 }
                 else if(_pill5.activeSelf)
                 {
                     _jar1_5.SetActive(true);
+                    _pill5.SetActive(false);
                 }
             }
             if(_jarHit.collider.gameObject == _jar2&Input.GetMouseButtonDown(0))
@@ -132,22 +137,27 @@ public class jarCheck : MonoBehaviour
                 if(_pill1.activeSelf)
                 {
                     _jar2_1.SetActive(true);
+                    _pill1.SetActive(false);
                 }
                 else if(_pill2.activeSelf)
                 {
                     _jar2_2.SetActive(true);
+                    _pill2.SetActive(false);
                 }
                 else if(_pill3.activeSelf)
                 {
                     _jar2_3.SetActive(true);
+                    _pill3.SetActive(false);
                 }
                 else if(_pill4.activeSelf)
                 {
                     _jar2_4.SetActive(true);
+                    _pill4.SetActive(false);
                 }
                 else if(_pill5.activeSelf)
                 {
                     _jar2_5.SetActive(true);
+                    _pill5.SetActive(false);
                 }
             }
             if(_jarHit.collider.gameObject == _jar3&Input.GetMouseButtonDown(0))
@@ -155,22 +165,27 @@ public class jarCheck : MonoBehaviour
                 if(_pill1.activeSelf)
                 {
                     _jar3_1.SetActive(true);
+                    _pill1.SetActive(false);
                 }
                 else if(_pill2.activeSelf)
                 {
                     _jar3_2.SetActive(true);
+                    _pill2.SetActive(false);
                 }
                 else if(_pill3.activeSelf)
                 {
                     _jar3_3.SetActive(true);
+                    _pill3.SetActive(false);
                 }
                 else if(_pill4.activeSelf)
                 {
                     _jar3_4.SetActive(true);
+                    _pill4.SetActive(false);
                 }
                 else if(_pill5.activeSelf)
                 {
                     _jar3_5.SetActive(true);
+                    _pill5.SetActive(false);
                 }
             }
             if(_jarHit.collider.gameObject == _jar4&Input.GetMouseButtonDown(0))
@@ -178,22 +193,27 @@ public class jarCheck : MonoBehaviour
                 if(_pill1.activeSelf)
                 {
                     _jar4_1.SetActive(true);
+                    _pill1.SetActive(false);
                 }
                 else if(_pill2.activeSelf)
                 {
                     _jar4_2.SetActive(true);
+                    _pill2.SetActive(false);
                 }
                 else if(_pill3.activeSelf)
                 {
                     _jar4_3.SetActive(true);
+                    _pill3.SetActive(false);
                 }
                 else if(_pill4.activeSelf)
                 {
                     _jar4_4.SetActive(true);
+                    _pill4.SetActive(false);
                 }
                 else if(_pill5.activeSelf)
                 {
                     _jar4_5.SetActive(true);
+                    _pill5.SetActive(false);
                 }
             }
             if(_jarHit.collider.gameObject == _jar5&Input.GetMouseButtonDown(0))
@@ -201,22 +221,27 @@ public class jarCheck : MonoBehaviour
                 if(_pill1.activeSelf)
                 {
                     _jar5_1.SetActive(true);
+                    _pill1.SetActive(false);
                 }
                 else if(_pill2.activeSelf)
                 {
                     _jar5_2.SetActive(true);
+                    _pill2.SetActive(false);
                 }
                 else if(_pill3.activeSelf)
                 {
                     _jar5_3.SetActive(true);
+                    _pill3.SetActive(false);
                 }
                 else if(_pill4.activeSelf)
                 {
                     _jar5_4.SetActive(true);
+                    _pill4.SetActive(false);
                 }
                 else if(_pill5.activeSelf)
                 {
                     _jar5_5.SetActive(true);
+                    _pill5.SetActive(false);
                 }
             }
         }
