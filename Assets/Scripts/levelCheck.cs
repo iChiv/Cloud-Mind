@@ -119,7 +119,13 @@ public class levelCheck : MonoBehaviour
 
         if(_finished)
         {
-            
+            _mainCam.GetComponent<MouseLook>().enabled = false;
+            _f_bg.GetComponent<DOTweenAnimation>().DOPlay();
+            _f_text.GetComponent<DOTweenAnimation>().DOPlay();
+            if(Input.anyKeyDown)
+            {
+                Application.Quit();
+            }
         }
     }
 }
